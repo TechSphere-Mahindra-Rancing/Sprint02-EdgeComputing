@@ -1,4 +1,4 @@
-# Weather Sensor for Formula E
+# Sprint02 - Weather Sensor for Formula E
 
 ![Project Circuit](img/circuito.png)
 
