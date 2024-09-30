@@ -16,15 +16,28 @@ O principal objetivo deste projeto é fornecer dados climáticos precisos e em t
 
 Além disso, o projeto visa implementar as configurações do FIWARE, seguindo as instruções do [FIWARE Descomplicado](https://github.com/fabiocabrini/fiware) do professor [Cabrini](https://www.linkedin.com/in/fabio-cabrini/), para garantir que os dados coletados sejam gerenciados de forma eficiente e estejam disponíveis para utilização em aplicações IoT.
 
+### Acesso ao prototipo simulado
+<a href="https://wokwi.com/projects/410460243920643073" target="_blank" style="text-align: center; margin-right: 10px;">
+  <img loading="lazy" src="/img/wokwi.png" width="150px">
+</a>
+
+### Vídeo explicativo sobre o prejeto
+
+<a href="" target="_blank" style="text-align: center; margin-right: 10px;">
+  <img loading="lazy" src="/img/youtube.png" width="150px">
+</a>
+
 ## Arquitetura da Solução IoT
 
 ![Arquitetura da Solução IoT](img/arquitetura-iot..png)
 
 ## Recursos Necessários
 
-### Dispositivos IoT
+### Componentes Utilizados
 
-- Sensor de luminosidade (LDR)
+- **ESP32 DevKit v1**
+- **Módulo Sensor Fotoresistor (LDR)**
+- **Fios de Conexão**
 - Sensor de temperatura e umidade (DHT22)
 - Sensor de chuva
 - Módulo ESP32 para conectividade Wi-Fi
@@ -39,25 +52,118 @@ Além disso, o projeto visa implementar as configurações do FIWARE, seguindo a
 - Site da equipe TechSphere para apresentação dos dados climáticos
 - Interface de usuário para visualização em tempo real das condições meteorológicas
 
-## Instruções de Uso
+### Integração com FIWARE
 
-1. Conecte todos os sensores ao módulo ESP32 conforme o esquema elétrico fornecido.
-2. Carregue o código-fonte no ESP32 utilizando a IDE Arduino ou outro ambiente de desenvolvimento compatível.
-3. Configure as credenciais do Wi-Fi e do Broker MQTT no código.
-4. Inicie o módulo e monitore os dados através do site da equipe TechSphere.
+Este projeto utiliza a **Plataforma FIWARE** como back-end da solução, onde:
+- O **Postman** é utilizado para testar e consumir a API.
+- Uma **Máquina Virtual no Azure** é utilizada para hospedar o servidor FIWARE, que gerencia o envio e recebimento de dados de luminosidade, temperatura, umidade e precipitação.
 
-## Requisitos
+### Funcionalidades
 
-- Módulo ESP32
-- Bibliotecas: DHT, PubSubClient, WiFi
-- Ambiente de desenvolvimento compatível (IDE Arduino, PlatformIO, etc.)
+- **Leitura de Condições Meteorológicas**: Os sensores coletam dados de luminosidade, temperatura, umidade e chuva, enviando as leituras para o broker MQTT.
+- **Publicação MQTT**: Os dados coletados são publicados em um broker MQTT, permitindo a integração com o FIWARE Helix.
+- **Controle via MQTT**: O sistema possui controle de dispositivos (como LEDs) através de comandos recebidos no MQTT.
 
-## Dependências
+### Passo a Passo para Reproduzir o Projeto
 
-- A biblioteca DHT para leitura de temperatura e umidade.
-- A biblioteca PubSubClient para gerenciamento de mensagens MQTT.
+Para reproduzir este projeto, siga as instruções detalhadas no repositório do professor [Fábio Cabrini](https://github.com/fabiocabrini/fiware), que descreve como configurar o ambiente FIWARE e integrar dispositivos IoT com o broker MQTT e o Helix.
 
-## Código Fonte
+### Bibliotecas Utilizadas
 
-O código-fonte completo do projeto pode ser encontrado no diretório `src/`. Certifique-se de ter todas as dependências instaladas para garantir o funcionamento correto da aplicação.
+As seguintes bibliotecas são necessárias para o funcionamento do código:
 
+- **WiFi.h**: Para conexão com redes Wi-Fi.
+- **PubSubClient.h**: Para comunicação com o broker MQTT.
+- **DHT.h**: Para leitura de temperatura e umidade (DHT22).
+
+### Plataforma
+
+O desenvolvimento foi realizado na plataforma Wokwi, que permite simular a operação do ESP32 com os sensores meteorológicos.
+
+### Como Usar
+
+Clone o repositório:
+
+1. ```bash
+   git clone https://github.com/Cps-Tech-Sphere/CP4-EdgeComputing.git´´´
+
+Claro! Aqui está a adaptação do trecho de README para o seu projeto de sensor meteorológico:
+
+markdown
+
+### Integração com FIWARE
+
+Este projeto utiliza a **Plataforma FIWARE** como back-end da solução, onde:
+- O **Postman** é utilizado para testar e consumir a API.
+- Uma **Máquina Virtual no Azure** é utilizada para hospedar o servidor FIWARE, que gerencia o envio e recebimento de dados de luminosidade, temperatura, umidade e precipitação.
+
+### Funcionalidades
+
+- **Leitura de Condições Meteorológicas**: Os sensores coletam dados de luminosidade, temperatura, umidade e chuva, enviando as leituras para o broker MQTT.
+- **Publicação MQTT**: Os dados coletados são publicados em um broker MQTT, permitindo a integração com o FIWARE Helix.
+- **Controle via MQTT**: O sistema possui controle de dispositivos (como LEDs) através de comandos recebidos no MQTT.
+
+### Passo a Passo para Reproduzir o Projeto
+
+Para reproduzir este projeto, siga as instruções detalhadas no repositório do professor [Fábio Cabrini](https://github.com/fabiocabrini/fiware), que descreve como configurar o ambiente FIWARE e integrar dispositivos IoT com o broker MQTT e o Helix.
+
+### Bibliotecas Utilizadas
+
+As seguintes bibliotecas são necessárias para o funcionamento do código:
+
+- **WiFi.h**: Para conexão com redes Wi-Fi.
+- **PubSubClient.h**: Para comunicação com o broker MQTT.
+- **DHT.h**: Para leitura de temperatura e umidade (DHT22).
+- **Adafruit_Sensor.h**: Para integração de sensores.
+
+### Plataforma
+
+O desenvolvimento foi realizado na plataforma Wokwi, que permite simular a operação do ESP32 com os sensores meteorológicos.
+
+### Como Usar
+
+Clone o repositório:
+
+1. ```bash
+   git clone https://github.com/Cps-Tech-Sphere/CP4-EdgeComputing.git
+
+2. Configure o ambiente FIWARE conforme as instruções no repositório do professor Cabrini.
+3. Configure o código com as credenciais corretas de Wi-Fi e MQTT.
+4. Faça o upload do código no ESP32 através da plataforma Wokwi ou Arduino IDE.
+5. Monitore os dados climáticos pelo Serial Monitor ou broker MQTT
+
+### Autores
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+<a href="https://github.com/jaoAprendiz" target="_blank" style="text-align: center; margin-right: 10px;">
+<img loading="lazy" src="https://avatars.githubusercontent.com/jaoAprendiz" width=120>
+<p style="font-size:min(2vh, 36px); margin-top: 10px;">João Victor - RM 557595</p>
+</a>
+
+<a href="https://github.com/K1rit03" target="_blank" style="text-align: center; margin-right: 10px;">
+<img loading="lazy" src="https://avatars.githubusercontent.com/K1rit03" width=120>
+<p style="font-size:min(2vh, 36px); margin-top: 10px;">Thiago Oliveira - RM 555485</p>
+</a>
+</div>
+
+<a href="https://github.com/JeannMatheuss" target="_blank" style="text-align: center; margin-right: 10px;">
+<img loading="lazy" src="https://avatars.githubusercontent.com/JeannMatheuss" width=120>
+<p style="font-size:min(2vh, 36px); margin-top: 10px;">Jean Matheus - RM 555519</p>
+</a>
+
+
+<a href="https://github.com/Malice112" target="_blank" style="text-align: center; margin-right: 10px;">
+<img loading="lazy" src="https://avatars.githubusercontent.com/Malice112" width=120>
+<p style="font-size:min(2vh, 36px); margin-top: 10px;">Maria Alice - 557516</p>
+</a>
+
+
+<a href="https://github.com/iannyrfs" target="_blank" style="text-align: center; margin-right: 10px;">
+<img loading="lazy" src="https://github.com/iannyrfs" width=120>
+<p style="font-size:min(2vh, 36px); margin-top: 10px;">Ianny Raquel - 559096</p>
+</a>
+</div>
+
+### Licença
+
+Este projeto está licenciado sob a licença MIT.
