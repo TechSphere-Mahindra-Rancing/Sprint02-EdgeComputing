@@ -86,7 +86,7 @@ Development was carried out on the Wokwi platform, which allows simulating the o
 Clone the repository:
 
 1. ```bash
-   [git clone https://github.com/Cps-Tech-Sphere/CP4-EdgeComputing.git](https://github.com/TechSphere-Mahindra-Rancing/Sprint02-EdgeComputing)
+   git clone https://github.com/TechSphere-Mahindra-Rancing/Sprint02-EdgeComputing
 
 2. Configure the FIWARE environment according to the instructions in professor Cabrini's repository.
 3. Configure the code with the correct Wi-Fi and MQTT credentials.
