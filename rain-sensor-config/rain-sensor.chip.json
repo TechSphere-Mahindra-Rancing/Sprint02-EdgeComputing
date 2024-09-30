@@ -1,0 +1,23 @@
+{
+    "name": "rain-sensor",
+    "author": "Vicky Sigler",
+    "pins": [
+      "VCC",
+      "GND",
+      "DO",
+      "AO",
+      "",
+      "",
+      ""
+    ],
+    "controls": [
+      {
+        "id": "rain",
+        "label": "Rain amount",
+        "type": "range",
+        "min": 0,
+        "max": 1023,
+        "step": 1
+      }
+    ]
+  }
