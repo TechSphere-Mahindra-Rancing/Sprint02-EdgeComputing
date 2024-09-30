@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-Este projeto tem como objetivo monitorar dados ambientais (luminosidade, temperatura, umidade e chuva) utilizando dispositivos IoT (ESP32 e sensores) e exibi-los em um dashboard web interativo desenvolvido com Dash. Os dados coletados pelos sensores são enviados via MQTT para um broker, onde o back-end processa e armazena as informações. O front-end exibe os dados em gráficos para facilitar a análise em tempo real.
+Este projeto é um sensor meteorológico feito especialmente para as corridas da Fórmula E e tem como objetivo monitorar dados ambientais (luminosidade, temperatura, umidade e chuva) utilizando dispositivos IoT (ESP32 e sensores) e exibi-los em um dashboard web interativo desenvolvido com Dash. Os dados coletados pelos sensores são enviados via MQTT para um broker, onde o back-end processa e armazena as informações. O front-end exibe os dados em gráficos para facilitar a análise em tempo real.
 
 ## Arquitetura da Solução
 
@@ -12,7 +12,7 @@ A arquitetura proposta envolve três componentes principais:
 2. **Back-End**: Responsável por coletar, processar e armazenar os dados dos sensores em um broker MQTT. A solução usa APIs para expor os dados coletados.
 3. **Front-End**: Dashboard desenvolvido em Dash (Python), que acessa os dados do back-end e exibe gráficos interativos para análise dos dados ambientais.
 
-![Draft da Arquitetura](./docs/arquitetura-iot.png)  
+![Draft da Arquitetura](./img/arquitetura.png)  
 *(Incluir o diagrama gerado no draw.io aqui)*
 
 ## Recursos Necessários
