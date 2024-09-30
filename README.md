@@ -18,7 +18,7 @@ Além disso, o projeto visa implementar as configurações do FIWARE, seguindo a
 
 ## Arquitetura da Solução IoT
 
-![Arquitetura da Solução IoT](img/arquitetura-iot.png)
+![Arquitetura da Solução IoT](img/arquitetura-iot..png)
 
 ## Recursos Necessários
 
