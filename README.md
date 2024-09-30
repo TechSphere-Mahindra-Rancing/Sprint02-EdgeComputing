@@ -80,17 +80,6 @@ As seguintes bibliotecas são necessárias para o funcionamento do código:
 
 O desenvolvimento foi realizado na plataforma Wokwi, que permite simular a operação do ESP32 com os sensores meteorológicos.
 
-### Como Usar
-
-Clone o repositório:
-
-1. ```bash
-   git clone https://github.com/Cps-Tech-Sphere/CP4-EdgeComputing.git´´´
-
-Claro! Aqui está a adaptação do trecho de README para o seu projeto de sensor meteorológico:
-
-markdown
-
 ### Integração com FIWARE
 
 Este projeto utiliza a **Plataforma FIWARE** como back-end da solução, onde:
