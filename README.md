@@ -12,7 +12,7 @@ A arquitetura proposta envolve três componentes principais:
 2. **Back-End**: Responsável por coletar, processar e armazenar os dados dos sensores em um broker MQTT. A solução usa APIs para expor os dados coletados.
 3. **Front-End**: Dashboard desenvolvido em Dash (Python), que acessa os dados do back-end e exibe gráficos interativos para análise dos dados ambientais.
 
-![Draft da Arquitetura](./img/arquitetura.png)  
+![Draft da Arquitetura](./img/arquitetura-iot.png)  
 *(Incluir o diagrama gerado no draw.io aqui)*
 
 ## Recursos Necessários
