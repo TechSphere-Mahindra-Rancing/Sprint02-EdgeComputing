@@ -1,41 +1,63 @@
-# Weather Sensor Dashboard
+# Sensor Meteorológico para Formula E
 
 ![Circuito do Projeto](img/circuito.png)
 
 ## Descrição do Projeto
 
-Este projeto é um sensor meteorológico feito especialmente para as corridas da Fórmula E e tem como objetivo monitorar dados ambientais (luminosidade, temperatura, umidade e chuva) utilizando dispositivos IoT (ESP32 e sensores) e exibi-los em um dashboard web interativo desenvolvido com Dash. Os dados coletados pelos sensores são enviados via MQTT para um broker, onde o back-end processa e armazena as informações. O front-end exibe os dados em gráficos para facilitar a análise em tempo real.
+Este projeto consiste em um sensor meteorológico projetado para captar informações sobre as condições climáticas das pistas de corrida da Formula E. O sensor coleta dados sobre luminosidade, temperatura, umidade e precipitação, possibilitando a avaliação das condições atmosféricas em tempo real. Essas informações são essenciais para a equipe TechSphere, pois permitem que os dados climáticos sejam informados diretamente no site da equipe, auxiliando em decisões estratégicas durante as corridas.
 
-## Arquitetura da Solução
+## Objetivo
 
-A arquitetura proposta envolve três componentes principais:
+O principal objetivo deste projeto é fornecer dados climáticos precisos e em tempo real que podem ser utilizados pela equipe TechSphere para:
 
-1. **Dispositivos IoT**: Sensores de luminosidade, temperatura, umidade e chuva conectados a um ESP32.
-2. **Back-End**: Responsável por coletar, processar e armazenar os dados dos sensores em um broker MQTT. A solução usa APIs para expor os dados coletados.
-3. **Front-End**: Dashboard desenvolvido em Dash (Python), que acessa os dados do back-end e exibe gráficos interativos para análise dos dados ambientais.
+- Monitorar as condições climáticas nas pistas de corrida.
+- Informar as decisões durante as corridas com base em dados meteorológicos.
+- Melhorar a comunicação das condições do tempo para os fãs e participantes da corrida.
 
-![Draft da Arquitetura](img/arquitetura-iot..png)  
+Além disso, o projeto visa implementar as configurações do FIWARE, seguindo as instruções do [FIWARE Descomplicado](https://github.com/fabiocabrini/fiware) do professor [Cabrini](https://www.linkedin.com/in/fabio-cabrini/), para garantir que os dados coletados sejam gerenciados de forma eficiente e estejam disponíveis para utilização em aplicações IoT.
+
+## Arquitetura da Solução IoT
+
+![Arquitetura da Solução IoT](img/arquitetura-iot.png)
 
 ## Recursos Necessários
 
 ### Dispositivos IoT
-- **ESP32**: Microcontrolador para realizar a leitura dos sensores e enviar os dados via protocolo MQTT.
-- **Sensores**:
-  - Sensor de Luminosidade (LDR)
-  - Sensor de Temperatura e Umidade (DHT22 ou BMP280)
-  - Sensor de Chuva
-- **Módulo MQTT**: Para comunicação entre os dispositivos IoT e o back-end.
 
-### Back-End
-- **Broker MQTT**: Responsável por gerenciar a comunicação entre os dispositivos e o servidor.
-- **API FIWARE**: Utilizada para expor os dados do broker MQTT em formato JSON.
+- Sensor de luminosidade (LDR)
+- Sensor de temperatura e umidade (DHT22)
+- Sensor de chuva
+- Módulo ESP32 para conectividade Wi-Fi
 
-### Front-End
-- **Dash (Python)**: Utilizado para desenvolver o dashboard web, onde os dados coletados são apresentados em gráficos.
+### Back-end
+
+- Broker MQTT para gerenciamento de mensagens
+- Servidor para processamento de dados (pode ser configurado com FIWARE)
+
+### Front-end
+
+- Site da equipe TechSphere para apresentação dos dados climáticos
+- Interface de usuário para visualização em tempo real das condições meteorológicas
 
 ## Instruções de Uso
 
-### Clonando o Repositório
-Para clonar o projeto, execute o seguinte comando no terminal:
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+1. Conecte todos os sensores ao módulo ESP32 conforme o esquema elétrico fornecido.
+2. Carregue o código-fonte no ESP32 utilizando a IDE Arduino ou outro ambiente de desenvolvimento compatível.
+3. Configure as credenciais do Wi-Fi e do Broker MQTT no código.
+4. Inicie o módulo e monitore os dados através do site da equipe TechSphere.
+
+## Requisitos
+
+- Módulo ESP32
+- Bibliotecas: DHT, PubSubClient, WiFi
+- Ambiente de desenvolvimento compatível (IDE Arduino, PlatformIO, etc.)
+
+## Dependências
+
+- A biblioteca DHT para leitura de temperatura e umidade.
+- A biblioteca PubSubClient para gerenciamento de mensagens MQTT.
+
+## Código Fonte
+
+O código-fonte completo do projeto pode ser encontrado no diretório `src/`. Certifique-se de ter todas as dependências instaladas para garantir o funcionamento correto da aplicação.
+
