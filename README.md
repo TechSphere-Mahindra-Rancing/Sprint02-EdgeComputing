@@ -153,7 +153,7 @@ Clone o repositório:
 
 
 <a href="https://github.com/Malice112" target="_blank" style="text-align: center; margin-right: 10px;">
-<img loading="lazy" src="https://avatars.githubusercontent.com/Malice112" width=120>
+<img loading="lazy" src="https://github.com/Alicee112" width=120>
 <p style="font-size:min(2vh, 36px); margin-top: 10px;">Maria Alice - 557516</p>
 </a>
 
