@@ -13,7 +13,7 @@ A arquitetura proposta envolve três componentes principais:
 3. **Front-End**: Dashboard desenvolvido em Dash (Python), que acessa os dados do back-end e exibe gráficos interativos para análise dos dados ambientais.
 
 ![Draft da Arquitetura](./img/arquitetura-iot.png)  
-*(Incluir o diagrama gerado no draw.io aqui)*
+<img src="/img/arquitetura-iot.png">
 
 ## Recursos Necessários
 
