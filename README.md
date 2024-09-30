@@ -126,6 +126,6 @@ Clone the repository:
 </a>
 </div>
 
+### Licença
 
-
-### This project is licensed under the MIT license.
+Este projeto está licenciado sob a licença MIT.
