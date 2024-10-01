@@ -23,7 +23,7 @@ Additionally, the project aims to implement FIWARE configurations by following t
 
 ### Explanatory Video about the Project
 
-<a href="" target="_blank" style="text-align: center; margin-right: 10px;">
+<a href="https://www.youtube.com/watch?v=Wm3iO0NJaic" target="_blank" style="text-align: center; margin-right: 10px;">
   <img loading="lazy" src="/img/youtube.png" width="150px">
 </a>
 
